@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Gerador Bilhete Urbano - Home</title>
+        <link href="/estilo_novo.css" rel="stylesheet" type="text/css"/>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="/comportamento.js"></script>
+    </head>
+    <body>
+        <header>
+            <div>
+                <a href="index.html"><img id="logo_img" src="/PATHFINDER_LOGO.svg" alt="Logo"></a>
+            </div>
+            <ul>
+                <a id="link_utilizacao" href="utilizacao.html"><li>Utilização</li></a>
+            </ul>
+        </header>
+        <main id="main_historico">
+            <section id="section_historico">
+                <form class="container">
+                    <label for="numero_bilhete" id="txt_qual_num_bilhete">Digite o código do bilhete para<br>acessar seu relatório de uso:</label>
+                    <input type="text" id="numero_bilhete_historico">
+                    <div id="botoes_form">
+                        <button type="reset" class="botao_historico" id="cancelar">Cancelar</button>
+                        <button type="button" class="botao_historico" id="confirmar" onclick="buscarRecargas()">Confirmar</button>
+                    </div>
+                </form>
+            </section>
+            <div class="historico_bilhete"> 
+                <table id="tabela_historico">
+                    <caption>Relatório de uso do bilhete:</caption>
+                    <thead>
+                        <tr>
+                            <th>Código Recarga</th>
+                            <th>Valor</th>
+                            <th>Data Recarga</th>
+                            <th>Data Uso</th>
+                            <th>Data Fim do Uso</th>
+                            <th>Tipo</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela_historico_body">
+                        <!--Propositalmente vazio-->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Bilhete Urbano - Já Possuo</title>
+        <link href="/estilo_novo.css" rel="stylesheet" type="text/css"/>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="/comportamento.js"></script>
+    </head>
+    <body>
+        <header>
+            <div>
+                <a href="index.html"><img id="logo_img" src="/PATHFINDER_LOGO.svg" alt="Logo"></a>
+            </div>
+            <ul>
+                <a id="link_historico" href="historico.html"><li>Histórico</li></a>
+                <a id="link_utilizacao" href="utilizacao.html"><li>Utilização</li></a>
+            </ul>
+        </header>
+        <main id="main_japossui">
+            <section id="section_japossui">
+                <form class="container">
+                    <label for="numero_bilhete" id="txt_qual_num_bilhete">Qual o código do bilhete?</label>
+                    <input type="text" id="numero_bilhete">
+                    <div id="botoes_form">
+                        <button type="reset" class="botao_japossui" id="cancelar" onclick="location.href='index.html';">Cancelar</button>
+                        <button type="submit" class="botao_japossui" id="confirmar" onclick="buscarBilhete()">Confirmar</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>

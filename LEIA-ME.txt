@@ -1,0 +1,121 @@
+---------------------
+--   PATH FINDER   --
+---------------------
+
+------------
+INTRODUÇÃO
+------------
+Projeto Integrador II - Sistemas de Informação - PUC-Campinas
+Feito por:
+  Pedro Barboza Valente
+  Renato Wilker de Paula Silva
+  Vinicius Ferreira Paiola
+
+Devido à necessidade de um sistema unificado, virtual, e que facilitasse para
+o usuário conseguir comprar e utilizar seus bilhetes de transporte no dia a dia,
+criamos o sistema de geração de bilhete urbano. Nele o usuário conseguirá realizar
+a geração do número de bilhete e no mesmo sistema recarregá-lo com o tipo de
+recarga de preferência, tendo 4 opções ao todo.
+
+Nesse sistema o usário também conseguirá, a partir do número do bilhete,
+ver o histórico de todas as recargas realizadas, com a data e o horário da geração
+e de possíveis utilizações.
+
+Dessa forma, o sistema servirá de modo a facilitar a compra e uso de bilhetes de
+transporte público, ao digitalizar a geração e recarga. Facilitando assim a obtenção
+e acesso de usários ao transporte público.
+
+------------
+INSTALAÇÃO
+------------
+
+Drive com todas as versões: https://drive.google.com/drive/folders/1k7C8ET9Wzo5wjh2vQz2lzDWrb8t7p6i5
+
+Instalar:
+  Nodejs:         https://nodejs.org/en/download/ (instalar versão binaria .zip e descompactar)
+  Instant Client: https://www.oracle.com/br/database/technologies/instant-client/downloads.html
+  Oracledb:       abrir prompt de comando, digitar 
+                  "cd (path onde você baixou)\Projeto Integrador II\scripts\ProjetoIntegradorNode" 
+                  e digitar "npm install oracledb --save"
+
+------------
+UTILIZAÇÃO
+------------
+
+Se tudo estiver correto, vá no arquivo dbconfig.js (na pasta ..\Projeto Integrador II\scripts)
+e escreva seu usuário e senha do oracle para utilizar o banco de dados.
+
+Depois disso abra o prompt de comando e passe o path do nodejs e do instant client exemplo:
+
+  path D:\Documents\node-v18.12.0-win-x64; D:\Documents\instantclient_21_7
+
+Para começar a usar entre na pasta "..\Projeto Integrador II\scripts\ProjetoIntegradorNode"
+e digite:
+
+  node index.js
+
+Se tudo der certo o sistema deverá informar:
+
+  Servidor ativo na porta 3000...
+
+Depois disso abra o navegador e coloque a url:
+
+  http://localhost:3000/index.html
+
+-------------
+ERROS COMUNS
+-------------
+
+Erro:
+  'node' não é reconhecido como um comando interno
+  ou externo, um programa operável ou um arquivo em lotes.
+Possíveis soluções:
+  Fechar e abrir cmd 
+  Inverter a ordem do path (passar node primeiro)
+  Verificar se descompactou o nodejs
+
+Erro:
+  Error: DPI-1047: Cannot locate a 64-bit Oracle Client library
+Possíveis soluções:
+  Ir na linha 13 do index.js e testar:
+    mudar de win32 pra win64 (ou inverso)
+    alterar o caminho do instantclient no código
+    apagar todo esse if()
+  Ir no cmd e digitar "npm install oracledb --save"
+
+Erro:
+  Error: ORA-01005: null password given; logon denied
+Possíveis soluções:
+  Alterar dbconfig.js (colocar sua senha do bd)
+
+Erro:
+  Error: ORA-01017: invalid username/password; logon denied
+Possíveis soluções:
+  Alterar dbconfig.js (colocar seu username e senha corretamente)
+
+Erro:
+  Error: ORA-12560: TNS:protocol adapter error
+Possíveis soluções:
+  Alterar dbconfig.js (colocal certo a connectString provavelmente 'localhost/xe')
+
+Erro:
+  Error: ORA-28000: the account is locked
+Possíveis soluções:
+  senta e chora
+
+-------------
+OBSERVAÇÕES
+-------------
+
+Funcionando:
+  Geração de bilhete
+  Recarga de bilhete
+  Busca de bilhete
+  Histórico de uso
+  Utilização
+
+Não esquecer de mudar o usuário no dbconfig
+
+Se não funcionar, verificar o path do instant client (linha 13 index.js)
+
+salve o corinthians

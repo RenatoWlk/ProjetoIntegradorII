@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Bilhete Urbano - Recarga Completa</title>
+        <link href="/estilo_novo.css" rel="stylesheet" type="text/css"/>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="/comportamento.js"></script>
+    </head>
+    <body onload="mostrarInfosRecarga()">
+        <header>
+            <div>
+                <a href="index.html"><img id="logo_img" src="/PATHFINDER_LOGO.svg" alt="Logo"></a>
+            </div>
+            <ul>
+                <a id="link_historico" href="historico.html"><li>Histórico</li></a>
+                <a id="link_utilizacao" href="utilizacao.html"><li>Utilização</li></a>
+            </ul>
+        </header>
+        <main id="main_recarga_completa">
+            <article id="article_completa">
+                <label for="recarga_completa">Recarga Completa ✓</label>
+                <ul>
+                    <li id="li_1">Caracteristicas da Recarga escolhida</li>
+                    <li id="li_2">Caracteristicas da Recarga escolhida</li>
+                    <li id="li_3">Caracteristicas da Recarga escolhida</li>
+                    <li id="li_4">Caracteristicas da Recarga escolhida</li>
+                </ul>
+                <button id="botao_mais_recarga" onclick="location.href='recarga.html';">Mais recargas</button>
+            </article>
+        </main>
+    </body>
+</html>

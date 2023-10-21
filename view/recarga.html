@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Bilhete Urbano - Recarga</title>
+        <link href="/estilo_novo.css" rel="stylesheet" type="text/css"/>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="/comportamento.js"></script>
+    </head>
+    <body onload="mostrarNumBilhete()">
+        <header>
+            <div>
+                <a href="index.html"><img id="logo_img" src="/PATHFINDER_LOGO.svg" alt="Logo"></a>
+            </div>
+            <div>
+                <label id="txt_num_bilhete">O código do seu bilhete é: </label>
+            </div>
+            <ul>
+                <a id="link_historico" href="historico.html"><li>Histórico</li></a>
+                <a id="link_utilizacao" href="utilizacao.html"><li>Utilização</li></a>
+            </ul>
+        </header>
+        <main id="main_recarga">
+            <h2 id="txt_escolha_recarga">Escolha o tipo de recarga:</h2>
+            <section id="section_recarga">
+                <div>
+                    <button class="botao_recargas" role="button" onclick=recarregarBilhete(1)>
+                        <span class="text">Recarga Única<br>R$1,00</span>
+                        <span>
+                            <ul>
+                                <li>Tempo de uso: 40 minutos;</li>
+                                <li>Acesse mais de um transporte;</li>
+                            </ul>
+                        </span>
+                    </button>
+                </div>
+                <div>
+                    <button class="botao_recargas" role="button" onclick=recarregarBilhete(2)>
+                        <span class="text">Recarga Dupla<br>R$2,00</span>
+                        <span>
+                            <ul>
+                                <li>Tempo de uso: 80 minutos;</li>
+                                <li>Acesse mais de um transporte;</li>
+                            </ul>
+                        </span>
+                    </button>
+                </div>
+                <div>
+                    <button class="botao_recargas" role="button" onclick=recarregarBilhete(3)>
+                        <span class="text">Recarga Semanal<br>R$5,00</span>
+                        <span>
+                            <ul>
+                                <li>Tempo de uso: 7 dias;</li>
+                                <li>Acesso ilimitado a transportes;</li>
+                            </ul>
+                        </span>
+                    </button>
+                </div>
+                <div>
+                    <button class="botao_recargas" role="button" onclick=recarregarBilhete(4)>
+                        <span class="text">Recarga Mensal<br>R$20,00</span>
+                        <span>
+                            <ul>
+                                <li>Tempo de uso: 30 dias;</li>
+                                <li>Acesso ilimitado a transportes;</li>
+                            </ul>
+                        </span>
+                    </button>
+                </div>
+            </section> 
+        </main>
+    </body>
+</html>

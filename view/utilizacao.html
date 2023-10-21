@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Gerador Bilhete Urbano - Itinerários</title>
+        <link href="estilo_novo.css" rel="stylesheet" type="text/css"/>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="/comportamento.js"></script>
+    </head>
+    <body>
+        <header>
+            <div>
+                <a href="index.html"><img id="logo_img" src="/PATHFINDER_LOGO.svg" alt="Logo"></a>
+            </div>
+            <ul>
+                <a id="link_histórico" href="historico.html"><li>Histórico</li></a>
+            </ul>
+        </header>
+        <main id="main_japossui">
+            <section id="section_utilizacao">
+                <form class="container">
+                    <label for="numero_bilhete" id="txt_qual_num_bilhete_uso">Digite o código do bilhete <br>para acessar sua utilização:</label>
+                    <input type="number" id="input_numero_bilhete_uso">
+                </form>
+            </section>
+            <section id="section_botoes_utilizacao">
+                <div class="colunas_botoes_utilizacao" id="coluna_botoes_1">
+                    <div class="infos_utilizacao">
+                        <label class="rota_utilizacao">NORTE<img class="seta_img" src="/PATHFINDER_SETA.svg">CENTRO</label>
+                        <button class="botao_usar" onclick=usarBilhete()>Usar</button>
+                    </div>
+                    <div class="infos_utilizacao">
+                        <label class="rota_utilizacao">CENTRO<img class="seta_img" src="/PATHFINDER_SETA.svg">NORTE</label>
+                        <button class="botao_usar" onclick=usarBilhete()>Usar</button>
+                    </div>
+                    <div class="infos_utilizacao">
+                        <label class="rota_utilizacao">LESTE<img class="seta_img" src="/PATHFINDER_SETA.svg">OESTE</label>
+                        <button class="botao_usar" onclick=usarBilhete()>Usar</button>
+                    </div>
+                </div>
+                <div class="colunas_botoes_utilizacao" id="coluna_botoes_2">
+                    <div class="infos_utilizacao">
+                        <label class="rota_utilizacao">SUL<img class="seta_img" src="/PATHFINDER_SETA.svg">CENTRO</label>
+                        <button class="botao_usar" onclick=usarBilhete()>Usar</button>
+                    </div>
+                    <div class="infos_utilizacao">
+                        <label class="rota_utilizacao">CENTRO<img class="seta_img" src="/PATHFINDER_SETA.svg">OESTE</label>
+                        <button class="botao_usar" onclick=usarBilhete()>Usar</button>
+                    </div>
+                    <div class="infos_utilizacao">
+                        <label class="rota_utilizacao">OESTE<img class="seta_img" src="/PATHFINDER_SETA.svg">SUL</label>
+                        <button class="botao_usar" onclick=usarBilhete()>Usar</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

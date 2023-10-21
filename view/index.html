@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Gerador Bilhete Urbano - Home</title>
+        <link href="/estilo_novo.css" rel="stylesheet" type="text/css"/>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="/comportamento.js"></script>
+    </head>
+    <body>
+        <header>
+            <div>
+                <a href="index.html"><img id="logo_img" src="/PATHFINDER_LOGO.svg" alt="Logo"></a>
+            </div>
+            <ul>
+                <a id="link_historico" href="historico.html"><li>Histórico</li></a>
+                <a id="link_utilizacao" href="utilizacao.html"><li>Utilização</li></a>
+                <a id="link_possui" href="japossui.html"><li>Já Possuo</li></a>
+            </ul>
+        </header>
+        <main id="main_home">
+            <aside id="aside_home">
+                <h2>Seja Bem Vindo ao Gerador de Bilhete Urbano</h2>
+                <button id="botao_gerar" onclick="gerarBilhete()" disabled>Gerar Bilhete</button>
+                <p>Atenção: antes de gerar seu bilhete leia as regras de uso!</p>
+            </aside>
+            <article id="article_home">
+                <div>
+                    <img id="anuncio_img" src="/PATHFINDER_ANUNCIO.svg" alt="Anúncios">
+                    <h3 id="regras_uso">REGRAS DE USO:</h3>
+                </div>
+                <p id="txt_anuncios">
+                    <ul id="lista_regras">
+                        <li>O Bilhete Urbano dará acesso ao transporte público;</li>
+                        <li>Ao gerar o bilhete, você receberá um número de identificação;</li>
+                        <li>Guarde o número do Bilhete, ele servirá para adicionar novas recargas, para acesso ao seu histórico e para utilização;</li>
+                        <li>Estando de acordo com as Regras, clique em "Gerar Bilhete Urbano"!</li>
+                    </ul>
+                </p>
+                <input type="checkbox" id="checkbox_aceito" onchange="aceitarRegras()">
+                <label for="checkbox_aceito" id="label_aceito">Eu li e aceito as Regras de Uso</label>
+            </article>
+        </main>
+    </body>
+</html>
